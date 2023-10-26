@@ -1,57 +1,103 @@
 from django.shortcuts import render
-from rest_framework.decorators import api_view
+from rest_framework.decorators import action
+from rest_framework import viewsets
+from rest_framework.views import APIView
 from rest_framework.response import Response
-from api.models import Product
-from api.serializer import ProductSerializer
+from django.urls import reverse
+from django.contrib.sites.shortcuts import get_current_site
+from .models import Product
+from .serializer import ProductSerializer
 
-# Create your views here.
-@api_view(['GET'])
-def apiOverview(request):
-    api_urls = {
-        'List': 'products/',
-        'Detail View': 'product-detail/<str:pk>/',
-        'Create': 'product-create/',
-        'Update': 'product-update/<str:pk>/',
-        'Delete': 'product-delete/<str:pk>/',
-    }
-    return Response(api_urls)
+class WelcomeView(APIView):
+    """
+    Welcome to the EcomSiteAPI.
 
-    
-@api_view(['GET'])
-def products(request):
-    products = Product.objects.all()
-    serializer = ProductSerializer(products, many=True)
+    For More Information, visit the provided link below.
 
-    return Response(serializer.data)
+    Attributes:
+        None
 
+    Methods:
+        get(self, request): Retrieves and presents a welcome message with a link to access additional information.
 
-@api_view(['GET'])
-def productDetail(request, pk):
-    product = Product.objects.get(id=pk)
-    serializer = ProductSerializer(product)
+    Usage:
+        Access this view for a warm welcome and further details.
+    """
 
-    return Response(serializer.data)
+    def get(self, request):
+        message = "For More Information, visit the provided link:"
+        api_url = reverse('api-root')  # You can adjust this URL name based on your project's URL configuration
 
-@api_view(['POST'])
-def productCreate(request):
-    serializer = ProductSerializer(data=request.data)
-    if serializer.is_valid():
-        serializer.save()
+        current_site = get_current_site(request)
+        local_api_url = f"http://{current_site.domain}{api_url}"
 
-    return Response(serializer.data)
+        full_message = f"{message} {local_api_url}"
+        return Response({'api': full_message})
 
-@api_view(['POST'])
-def productUpdate(request, pk):
-    product = Product.objects.get(id=pk)
-    serializer = ProductSerializer(instance=product, data=request.data)
-    if serializer.is_valid():
-        serializer.save()
+class ProductViewSet(viewsets.ModelViewSet):
+    """
+    Provides CRUD operations for Product objects.
 
-    return Response(serializer.data)
+    This viewset allows you to perform CRUD operations on Product objects.
 
+    Attributes:
+        queryset: The queryset of Product objects.
+        serializer_class: The serializer class to use for Product objects.
 
-@api_view(['DELETE'])
-def productDelete(request, pk):
-    product = Product.objects.get(id=pk)
-    product.delete()
-    return Response('Item successfully deleted!')
+    Methods:
+        - product_detail(self, request, pk): Retrieves details of a specific Product.
+        - product_delete(self, request, pk): Deletes a specific Product.
+
+    Usage:
+        Use this viewset to perform CRUD operations on Product objects.
+    """
+
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+    @action(detail=True, methods=['GET'])
+    def product_detail(self, request, pk=None):
+        """
+        Retrieves details of a specific Product.
+
+        This action retrieves and returns the details of a specific Product.
+
+        Parameters:
+            - request: The HTTP request object.
+            - pk: The primary key of the Product to retrieve.
+
+        Returns:
+            JSON response containing the Product's details.
+
+        Usage:
+            Access this action to view the details of a specific Product.
+        """
+        product = self.get_object()
+        serializer = self.get_serializer(product)
+        return Response(serializer.data)
+
+    @action(detail=True, methods=['DELETE'])
+    def product_delete(self, request, pk=None):
+        """
+        Deletes a specific Product.
+
+        This action deletes a specific Product and returns a success message.
+
+        Parameters:
+            - request: The HTTP request object.
+            - pk: The primary key of the Product to delete.
+
+        Returns:
+            JSON response with a success message and a link to the product list.
+
+        Usage:
+            Access this action to delete a specific Product.
+        """
+        product = self.get_object()
+        product.delete()
+        response_data = {
+            'message': 'Product deleted successfully',
+            'back_url': '/products/'  # Specify the URL for the product list here
+        }
+        return Response(response_data)
+

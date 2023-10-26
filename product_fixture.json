@@ -1,112 +1,132 @@
 [
-{
-  "model": "api.product",
-  "pk": 1,
-  "fields": {
-    "name": "Yinyoo KZ EDX PRO Earphones Headphones",
-    "description": "Yinyoo KZ EDX PRO is Equipped with one new 10mm Dual magnetic circuit dynamic driver unit, Tuning focuses on the popular directions. The strong magnetic force enhances the low-frequency density. Restore sound details, bass bursts are more powerful. Rich texture and full of powerful bass. Bring you a new kind of auditory sense.",
-    "price": "1000.00",
-    "quantity": 100,
-    "category": "Headphones"
+  {
+    "model": "api.product",
+    "pk": 1,
+    "fields": {
+      "name": "Yinyoo KZ EDX PRO Earphones Headphones",
+      "description": "Yinyoo KZ EDX PRO is Equipped with one new 10mm Dual magnetic circuit dynamic driver unit, Tuning focuses on the popular directions. The strong magnetic force enhances the low-frequency density. Restore sound details, bass bursts are more powerful. Rich texture and full of powerful bass. Bring you a new kind of auditory sense.",
+      "price": "1000.00",
+      "quantity": 100,
+      "category": "Headphones",
+      "created_date": "2023-10-27T08:00:00Z",
+      "updated_date": "2023-10-27T08:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 2,
+    "fields": {
+      "name": "Lukzer Engineered Wood Computer Desk",
+      "description": "Assembly Required: DIY Installation,\" it implies that you will need to personally install it or make arrangements for a carpenter to handle the installation. The product is supplied with all the required hardware and a comprehensive installation guide.",
+      "price": "2600.00",
+      "quantity": 95,
+      "category": "Desks",
+      "created_date": "2023-10-27T08:00:00Z",
+      "updated_date": "2023-10-27T08:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 3,
+    "fields": {
+      "name": "ASUS TUF Gaming F15",
+      "description": "Processor: 12th Gen Intel Core i7-12700H Processor 2.3 GHz (24M Cache, up to 4.7 GHz, 14 cores: 6 P-cores and 8 E-cores)",
+      "price": "109200.00",
+      "quantity": 10,
+      "category": "Gaming Laptops",
+      "created_date": "2023-10-27T08:00:00Z",
+      "updated_date": "2023-10-27T08:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 4,
+    "fields": {
+      "name": "Rife Single Monitor Mount",
+      "description": "Rife Single Monitor Mount for 13-32 Inch Computer Screens, Improved LCD/LED Monitor Riser, Height/Angle Adjustable Single Desk Mount Stand, Holds up to 17.6lbs, Black",
+      "price": "1379.00",
+      "quantity": 45,
+      "category": "Monitor Mounts",
+      "created_date": "2023-10-27T08:00:00Z",
+      "updated_date": "2023-10-27T08:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 5,
+    "fields": {
+      "name": "Redgear Cosmo 7,1 Usb Gaming Wired Over Ear Headphones",
+      "description": "Redgear Cosmo 7,1 Usb Gaming Wired Over Ear Headphones With Mic With Virtual Surround Sound,50Mm Driver, Rgb Leds & Remote Control(Black)",
+      "price": "999.00",
+      "quantity": 123,
+      "category": "Headphones",
+      "created_date": "2023-10-27T08:00:00Z",
+      "updated_date": "2023-10-27T08:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 6,
+    "fields": {
+      "name": "proffisy Laptop Stand Double Layer Adjustable Laptop Raiser",
+      "description": "proffisy Laptop Stand Double Layer Adjustable Laptop Raiser Ergonomic Foldable Laptop Holder Compatible with MacBook Dell XPS HP Lenovo,Silver",
+      "price": "2936.00",
+      "quantity": 434,
+      "category": "Laptop Stands",
+      "created_date": "2023-10-27T08:00:00Z",
+      "updated_date": "2023-10-27T08:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 7,
+    "fields": {
+      "name": "Dyazo Laptop Sleeve",
+      "description": "Dyazo 13/13.3 Inch Laptop Sleeve",
+      "price": "284.00",
+      "quantity": 134,
+      "category": "Laptop Sleeves",
+      "created_date": "2023-10-27T08:00:00Z",
+      "updated_date": "2023-10-27T08:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 8,
+    "fields": {
+      "name": "Portronics Mport 31C USB C Hub (4-in-1),",
+      "description": "Portronics Mport 31C USB C Hub (4-in-1), Type C Multiport Adapter with 1 x USB 3.0 & 3 x USB 2.0 Ports, up to 5 Gbps High Speed Data Transfer for Laptop, MacBook, PC (Grey)",
+      "price": "328.00",
+      "quantity": 342,
+      "category": "USB Hubs",
+      "created_date": "2023-10-27T08:00:00Z",
+      "updated_date": "2023-10-27T08:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 9,
+    "fields": {
+      "name": "Logitech Lift Vertical Ergonomic Mouse",
+      "description": "Logitech Lift Vertical Ergonomic Mouse, Wireless, Bluetooth or Logi Bolt USB Receiver, Quiet clicks, 4 Buttons, Compatible with Windows/macOS/iPadOS, Laptop, PC - Graphite",
+      "price": "5999.00",
+      "quantity": 243,
+      "category": "Mice",
+      "created_date": "2023-10-27T08:00:00Z",
+      "updated_date": "2023-10-27T08:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 10,
+    "fields": {
+      "name": "Logitech K380 Wireless Multi-Device Keyboard",
+      "description": "Logitech K380 Wireless Multi-Device Keyboard For Windows, Apple Ios, Apple Tv Android Or Chrome, Bluetooth, Compact Space-Saving Design, Pc/Mac/Laptop/Smartphone/Tablet (Dark Grey)",
+      "price": "2786.00",
+      "quantity": 345,
+      "category": "keyboards",
+      "created_date": "2023-10-27T08:00:00Z",
+      "updated_date": "2023-10-27T08:00:00Z"
+    }
   }
-},
-{
-  "model": "api.product",
-  "pk": 2,
-  "fields": {
-    "name": "Lukzer Engineered Wood Computer Desk",
-    "description": "Assembly Required: DIY Installation,\" it implies that you will need to personally install it or make arrangements for a carpenter to handle the installation. The product is supplied with all the required hardware and a comprehensive installation guide.",
-    "price": "2600.00",
-    "quantity": 95,
-    "category": "Desks"
-  }
-},
-{
-  "model": "api.product",
-  "pk": 3,
-  "fields": {
-    "name": "ASUS TUF Gaming F15",
-    "description": "Processor: 12th Gen Intel Core i7-12700H Processor 2.3 GHz (24M Cache, up to 4.7 GHz, 14 cores: 6 P-cores and 8 E-cores)",
-    "price": "109200.00",
-    "quantity": 10,
-    "category": "Gaming Laptops"
-  }
-},
-{
-  "model": "api.product",
-  "pk": 4,
-  "fields": {
-    "name": "Rife Single Monitor Mount",
-    "description": "Rife Single Monitor Mount for 13-32 Inch Computer Screens, Improved LCD/LED Monitor Riser, Height/Angle Adjustable Single Desk Mount Stand, Holds up to 17.6lbs, Black",
-    "price": "1379.00",
-    "quantity": 45,
-    "category": "Monitor Mounts"
-  }
-},
-{
-  "model": "api.product",
-  "pk": 5,
-  "fields": {
-    "name": "Redgear Cosmo 7,1 Usb Gaming Wired Over Ear Headphones",
-    "description": "Redgear Cosmo 7,1 Usb Gaming Wired Over Ear Headphones With Mic With Virtual Surround Sound,50Mm Driver, Rgb Leds & Remote Control(Black)",
-    "price": "999.00",
-    "quantity": 123,
-    "category": "Headphones"
-  }
-},
-{
-  "model": "api.product",
-  "pk": 6,
-  "fields": {
-    "name": "proffisy Laptop Stand Double Layer Adjustable Laptop Raiser",
-    "description": "proffisy Laptop Stand Double Layer Adjustable Laptop Raiser Ergonomic Foldable Laptop Holder Compatible with MacBook Dell XPS HP Lenovo,Silver",
-    "price": "2936.00",
-    "quantity": 434,
-    "category": "Laptop Stands"
-  }
-},
-{
-  "model": "api.product",
-  "pk": 7,
-  "fields": {
-    "name": "Dyazo Laptop Sleeve",
-    "description": "Dyazo 13/13.3 Inch Laptop Sleeve",
-    "price": "284.00",
-    "quantity": 134,
-    "category": "Laptop Sleeves"
-  }
-},
-{
-  "model": "api.product",
-  "pk": 8,
-  "fields": {
-    "name": "Portronics Mport 31C USB C Hub (4-in-1),",
-    "description": "Portronics Mport 31C USB C Hub (4-in-1), Type C Multiport Adapter with 1 x USB 3.0 & 3 x USB 2.0 Ports, up to 5 Gbps High Speed Data Transfer for Laptop, MacBook, PC (Grey)",
-    "price": "328.00",
-    "quantity": 342,
-    "category": "USB Hubs"
-  }
-},
-{
-  "model": "api.product",
-  "pk": 9,
-  "fields": {
-    "name": "Logitech Lift Vertical Ergonomic Mouse",
-    "description": "Logitech Lift Vertical Ergonomic Mouse, Wireless, Bluetooth or Logi Bolt USB Receiver, Quiet clicks, 4 Buttons, Compatible with Windows/macOS/iPadOS, Laptop, PC - Graphite",
-    "price": "5999.00",
-    "quantity": 243,
-    "category": "Mice"
-  }
-},
-{
-  "model": "api.product",
-  "pk": 10,
-  "fields": {
-    "name": "Logitech K380 Wireless Multi-Device Keyboard",
-    "description": "Logitech K380 Wireless Multi-Device Keyboard For Windows, Apple Ios, Apple Tv Android Or Chrome, Bluetooth, Compact Space-Saving Design, Pc/Mac/Laptop/Smartphone/Tablet (Dark Grey)",
-    "price": "2786.00",
-    "quantity": 345,
-    "category": "keyboards"
-  }
-}
 ]
